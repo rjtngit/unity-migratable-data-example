@@ -36,7 +36,7 @@ Play the Example scene in Unity and check the logs. You will see the version 1 d
 Wrap your serialized data in a namespace like “ExampleData”. Create a new namespace for the previous version. Previous versions of the data are wrapped in versioned namespaces like ExampleDataV1, ExampleDataV2, etc. The latest version is always “ExampleData” so that the latest version is always referenced throughout the project. The versioned namespaces are only referenced in the implementation of the migration. 
 
 ### SchemaVersion
-Increment the SchemaVersion for the data when data structure changes and a new versioned namespace is created. This is how the MigratableDataProcessor knows where to start the migration process. 
+Increment the SchemaVersion when data structure changes and a new versioned namespace is created. This is how the MigratableDataProcessor knows where to start the migration process. 
 
 ### MigrateFromPreviousVersion
 Implement MigrateFromPreviousVersion for the current version of the data. See ExampleData.DataHandler. 
