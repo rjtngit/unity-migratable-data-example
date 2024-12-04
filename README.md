@@ -56,7 +56,7 @@ public static class ExampleData // Current version of data structure does not ha
         public override MigratableDataProcessor.IVersionedData MigrateFromPreviousVersion(
             MigratableDataProcessor.IVersionedData migrateFrom)
         {
-            var fromData = (ExampleDataV1.Example) migrateFrom; // Migrate from the namespace for the previous version.
+            var fromData = (ExampleDataV1.Example) migrateFrom; // Migrate from the the previous version.
 
             Debug.Log($"{DataTypeName}: Migrating from {fromData.SchemaVersion} to {SchemaVersion}");
 
