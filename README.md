@@ -8,6 +8,28 @@
 
 Play the Example scene in Unity and check the logs. You will see the version 1 data (taken from ExampleData.json) and the version 2 data (contents after migration).
 
+### Before:
+```
+{
+  "id": "12345",
+  "exampleValue": 100,
+  "SchemaVersion": 1
+}
+```
+
+### After:
+```
+{
+  "id": "12345",
+  "values": {
+    "exampleValue1": 100,
+    "exampleValue2": -1
+  },
+  "SchemaVersion": 2
+}
+```
+
+
 ## How to create a new version of your data structure:
 
 ### Namespacing
