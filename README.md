@@ -33,7 +33,7 @@ Play the Example scene in Unity and check the logs. You will see the version 1 d
 ## How to create a new version of your data structure:
 
 ### Static Class Wrapper
-Wrap your serialized data in a static class like “ExampleData”. Create a new static class for the previous version. Previous versions of the data are wrapped in versioned static classes like ExampleDataV1, ExampleDataV2, etc. The latest version is always “ExampleData” so that the latest version is always referenced throughout the project. The versioned static classes are only referenced in the implementation of the migration. 
+Wrap your serialized data in a static class like “ExampleData”. Create a new static class for the previous version. Previous versions of the data are wrapped in versioned static classes like ExampleDataV1, ExampleDataV2, etc. The latest version does not have a numbered class name, so that the latest version is always referenced throughout the project. The versioned static classes are only referenced in the implementation of the migration. 
 
 ### SchemaVersion
 Increment the SchemaVersion when data structure changes and a new versioned static class is created. This is how the MigratableDataProcessor knows where to start the migration process. 
