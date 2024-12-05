@@ -8,6 +8,14 @@
 
 Play the Example scene in Unity and check the logs. You will see the version 1 data (taken from ExampleData.json) and the version 2 data (contents after migration).
 
+### Run migration
+```
+Debug.Log($"before: {dataBefore.text}"); 
+var dataObject = MigratableDataProcessor.FromJson<ExampleData.Example>(dataBefore.text);
+var dataAfter = MigratableDataProcessor.ToJson(dataObject);
+Debug.Log($"after: {dataAfter}");
+```
+
 ### Before:
 ```
 {
