@@ -6,7 +6,7 @@
 
 ## Run the Example:
 
-Play the Example scene in Unity and check the logs. You will see the version 1 data (taken from ExampleData.json) and the version 2 data (contents after migration).
+Play the Example scene in Unity and check the logs. You will see the version 1 data (loaded from ExampleData.json) and the version 2 data (after migration).
 
 ### Example
 ```
